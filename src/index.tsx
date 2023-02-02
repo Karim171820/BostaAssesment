@@ -5,16 +5,20 @@ import { store } from './app/store';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
+import { LanguageProvider } from './services/LanguageContext';
+import { HashRouter } from 'react-router-dom';
 
 const container = document.getElementById('root')!;
 const root = createRoot(container);
 
 root.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
-  </React.StrictMode>
+<HashRouter>
+    <LanguageProvider>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </LanguageProvider>
+  </HashRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function
