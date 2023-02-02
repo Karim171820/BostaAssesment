@@ -1,6 +1,7 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next';
 import logo from "../../assets/bosta-Logo.png"
+import "./Nav.css"
 
 export default function Nav() {
   const { t, i18n } = useTranslation();
